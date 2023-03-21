@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"groupedExercises",
+		"currentUnitaExercises",
+		"currentUnita",
+		"extraExercises"
+	],
+	"name" : "VIAAurMyPortfolioComponent",
+	"type" : "normal"
+}

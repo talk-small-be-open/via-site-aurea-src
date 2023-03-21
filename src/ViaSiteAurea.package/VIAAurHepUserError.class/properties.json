@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAError",
+	"category" : "ViaSiteAurea-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAAurHepUserError",
+	"type" : "normal"
+}

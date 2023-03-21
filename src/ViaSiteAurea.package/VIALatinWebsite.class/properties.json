@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAWebsite",
+	"category" : "ViaSiteAurea-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIALatinWebsite",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAurModuleExerciser",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAAurPrintModuleExerciser",
+	"type" : "normal"
+}

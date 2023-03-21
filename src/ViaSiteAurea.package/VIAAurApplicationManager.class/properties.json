@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAApplicationManager",
+	"category" : "ViaSiteAurea-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAAurApplicationManager",
+	"type" : "normal"
+}

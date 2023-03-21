@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAMainBaseComponent",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"controller"
+	],
+	"name" : "VIAMainTestdriveComponent",
+	"type" : "normal"
+}

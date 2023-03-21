@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAUnitComponent",
+	"category" : "ViaSiteAurea-View-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIADemoUnitComponent",
+	"type" : "normal"
+}

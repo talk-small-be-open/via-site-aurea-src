@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModuleExerciserBase",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentExerciser",
+		"exerciserComponents",
+		"subtitleTags",
+		"previousModule",
+		"nextModule",
+		"isAllMothertongue",
+		"previousComponent"
+	],
+	"name" : "VIAAurModuleExerciser",
+	"type" : "normal"
+}

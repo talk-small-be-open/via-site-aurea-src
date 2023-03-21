@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAurExerciserSolutionComponent",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isShowingCongratulation"
+	],
+	"name" : "VIAAurExerciserFinishedComponent",
+	"type" : "normal"
+}

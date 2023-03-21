@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIALoginBaseComponent",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rememberMe",
+		"hepErrorMessage",
+		"localEnabled"
+	],
+	"name" : "VIAAurLoginComponent",
+	"type" : "normal"
+}

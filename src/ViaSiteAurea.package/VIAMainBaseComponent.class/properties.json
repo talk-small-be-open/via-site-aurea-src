@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAFrontendMainBaseComponent",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"flashMessages",
+		"topMenu",
+		"mainMenu",
+		"menuRenderer",
+		"topMenuRenderer",
+		"backtraced"
+	],
+	"name" : "VIAMainBaseComponent",
+	"type" : "normal"
+}

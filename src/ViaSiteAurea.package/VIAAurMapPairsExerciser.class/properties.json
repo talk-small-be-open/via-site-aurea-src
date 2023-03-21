@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAMapPairsExerciserBase",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"exerciseId",
+		"jsEventHandler"
+	],
+	"name" : "VIAAurMapPairsExerciser",
+	"type" : "normal"
+}

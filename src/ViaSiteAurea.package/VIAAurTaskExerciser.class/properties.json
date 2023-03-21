@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "VIATaskExerciser",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"onFinishBlock",
+		"onCheckButtonBlock",
+		"parentComponent",
+		"pillarLengthEstimator",
+		"isMothertongue",
+		"isFacoltativo"
+	],
+	"name" : "VIAAurTaskExerciser",
+	"type" : "normal"
+}

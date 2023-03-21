@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIADefaultSession",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentToccaunit",
+		"workingToccaunit"
+	],
+	"name" : "VIAAurDefaultSession",
+	"type" : "normal"
+}

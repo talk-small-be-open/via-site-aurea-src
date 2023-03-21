@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "ViaSiteAurea-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"studentsGroups",
+		"selectedGroup"
+	],
+	"name" : "VIAAurTeacherMyCockpit",
+	"type" : "normal"
+}

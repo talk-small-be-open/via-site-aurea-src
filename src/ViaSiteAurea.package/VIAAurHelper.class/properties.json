@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAHelper",
+	"category" : "ViaSiteAurea-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAAurHelper",
+	"type" : "normal"
+}

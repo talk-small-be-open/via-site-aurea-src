@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModuleValidator",
+	"category" : "ViaSiteAurea-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAAurModuleValidator",
+	"type" : "normal"
+}
