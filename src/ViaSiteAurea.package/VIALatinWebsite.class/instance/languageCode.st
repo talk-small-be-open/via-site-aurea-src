@@ -1,3 +1,3 @@
 as yet unclassified
 languageCode
-	^#it
+	^#de
