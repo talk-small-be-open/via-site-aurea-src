@@ -21,7 +21,7 @@ renderContentOn: html
 				html div class: 'topBuffer'; with: [
 					html anchor
 						callback: [ self app openLoginDialog ];
-						with: 'DEV Login' ]].
+						with: 'DEVELOPMENT Login ...' ]].
 		
 				
 		].
