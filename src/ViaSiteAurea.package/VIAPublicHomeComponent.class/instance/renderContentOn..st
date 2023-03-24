@@ -18,7 +18,7 @@ renderContentOn: html
 				html div pT: 'publicHome:loginDisabled'
 			].
 			self ifDevelopment: [
-				html div: [
+				html div class: 'topBuffer'; with: [
 					html anchor
 						callback: [ self app openLoginDialog ];
 						with: 'DEV Login' ]].
