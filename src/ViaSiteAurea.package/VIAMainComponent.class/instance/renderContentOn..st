@@ -3,7 +3,7 @@ renderContentOn: html
 	self renderTopOn: html.
 	html div
 		class: 'mainContainer';
-		class: (VIAAurHelper toccamoduleCssOfToccaunit: self session currentToccaunit);
+"		class: (VIAAurHelper toccamoduleCssOfToccaunit: self session currentToccaunit);"
 		with: [
 			self renderHeaderOn: html.
 		"		self renderMenuOn: html."

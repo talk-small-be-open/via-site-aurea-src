@@ -3,8 +3,8 @@ initialize
 	super initialize.
 
 	"Von User voreinstellen"
-	selectedToccaunit := self session currentToccaunit.
-	search1 := selectedToccaunit ifNil: [ '' ] ifNotNil: [ :i | i asString].
+	selectedAureaCaput := self session currentAureaCaput.
+	search1 := selectedAureaCaput ifNil: [ '' ] ifNotNil: [ :i | i asString].
 	search2 := ''.
 	
 	searchQuery := VIAModuleSearchQuery new.

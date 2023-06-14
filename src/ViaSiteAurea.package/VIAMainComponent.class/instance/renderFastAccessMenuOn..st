@@ -14,7 +14,7 @@ renderFastAccessMenuOn: html
 			html anchor
 				callback: [ self gotoSmartUnit ];
 				with: [
-					html iconUnita: self session workingToccaunit active: active.
+					html iconUnita: self session workingAureaCaput active: active.
 					html span class: 'menuLabel uk-visible@l'; with: [
 						"html space."
 						html sT: 'main:fastAccess:unita']]
@@ -22,7 +22,7 @@ renderFastAccessMenuOn: html
 		active := (moduleType = 'P').
 		html listItem class: 'active' if: active; with: [
 			html anchor
-				callback: [ self gotoSmartPalloncini ];
+				callback: [ self gotoSmartCommentatio ];
 				with: [
 					html iconPallonciniActive: active.
 					html span class: 'menuLabel uk-visible@l'; with: [
@@ -32,7 +32,7 @@ renderFastAccessMenuOn: html
 		active := (moduleType = 'V').
 		html listItem class: 'active' if: active; with: [
 			html anchor
-				callback: [ self gotoSmartVocabolario ];
+				callback: [ self gotoSmartVocabula ];
 				with: [
 					html iconVocabolarioActive: active.
 					html span class: 'menuLabel uk-visible@l'; with: [

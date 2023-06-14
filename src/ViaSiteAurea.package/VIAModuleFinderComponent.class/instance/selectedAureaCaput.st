@@ -1,0 +1,3 @@
+accessing
+selectedAureaCaput
+	^ selectedAureaCaput

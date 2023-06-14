@@ -1,3 +1,3 @@
 icons
-iconMenuTocca
+iconMenuAurea
 	self fasIcon: 'book'

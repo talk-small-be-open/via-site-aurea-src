@@ -1,3 +1,3 @@
 as yet unclassified
-gotoToccaunit: anInteger
+gotoAureaCaput: anInteger
 	self show: (VIAUnitComponent number: anInteger)

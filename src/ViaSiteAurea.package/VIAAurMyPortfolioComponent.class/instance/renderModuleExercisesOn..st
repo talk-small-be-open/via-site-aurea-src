@@ -4,21 +4,21 @@ renderModuleExercisesOn: html
 
 	self renderLegendOn: html.
 
-	currentUnitaExercises ifNotBlank: [
+	currentUnitExercises ifNotBlank: [
 		| unitNumber |
-		unitNumber := currentUnita first.
+		unitNumber := currentUnit first.
 		html heading level4; class: 'currentUnit'; with: [
-			html sT: ('tocca:unit', unitNumber asString).
+			html sT: ('aurea:caput', unitNumber asString).
 		].
 
-		self renderModuleExercises: currentUnitaExercises on: html.
+		self renderModuleExercises: currentUnitExercises on: html.
 	].
 
 	extraExercises ifNotBlank: [
 		html heading level4; with: [
-			html sT: ('tocca:unitP').
+			html sT: ('aurea:unitC').
 			html text: ' / '.
-			html sT: ('tocca:unitV').
+			html sT: ('aurea:unitV').
 		].
 		self renderModuleExercises: extraExercises on: html.
 	].
@@ -37,7 +37,7 @@ renderModuleExercisesOn: html
 			level4;
 "			ukToggle: ('#', id);"
 			with: [
-				html sT: ('tocca:unit', unitNumber asString).
+				html sT: ('aurea:caput', unitNumber asString).
 		].
 
 		html div id: id; with: [

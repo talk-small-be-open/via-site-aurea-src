@@ -12,9 +12,6 @@ renderInvitationCodeOn: html
 		code := self invitationCommand invitationCode.		
 		mailto := VIAHelper createMailtoUrlTo: nil cc: nil bcc: nil subject: 'invitationMail:subject't body: ('invitationMail:body_code_'tp: {#code->code}).
 
-
-"		whatsapp := ((WAUrl absolute: 'https://wa.me/') addField: 'text' value: ('Tocca Einladungscode ', code))."
-		
 		html div: [
 			html heading level3; t: 'teacherMyCockpit:invitationCode'.
 			html div class: 'uk-margin'; pT: 'teacherMyCockpit:invitationCodeInfo'.

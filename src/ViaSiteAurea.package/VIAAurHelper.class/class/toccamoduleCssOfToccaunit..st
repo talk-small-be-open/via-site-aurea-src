@@ -1,4 +1,4 @@
-as yet unclassified
+deprecated
 toccamoduleCssOfToccaunit: anInteger
 	| number |
 	number := (self toccamoduleFromToccaunit: anInteger).

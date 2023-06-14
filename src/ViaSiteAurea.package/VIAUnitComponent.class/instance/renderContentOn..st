@@ -1,26 +1,30 @@
 rendering
 renderContentOn: html
-	html ukContainer with: [
-		html heading level1; class: 'unitNavigation'; with: [
-			html span class: 'left'; with: [
-				html anchor
-					callback: [ self gotoUp ];
-					with: [html iconBackUp]
-			].
-			html span: [
-				html sT: ('tocca:unit', unitNumber asString)].
-			html span class: 'right'.
+	html div class: 'unitNavigation'; with: [
+		html span class: 'left'; with: [
+			html anchor
+				callback: [ self gotoUp ];
+				with: [html iconBackUp]
 		].
+		html span.
+		html span class: 'right'.
+	].
+
+	html ukContainer: [
 		
 		self renderLegendOn: html.
+
+		html heading level1; with: [
+			html sT: ('aurea:caput', unitNumber asString) ].
+
 		
 		html ukList class: 'modulesList'; with: [
 			modules do: [ :each |
 				| tag |
 				tag := html listItem
-"					class: 'inWork' if: (self currentPortfolio isInWorkModule: each);
+	"					class: 'inWork' if: (self currentPortfolio isInWorkModule: each);
 					class: 'finished' if: (self currentPortfolio isDoneModule: each);"
-"					class: 'mothertongue' if: each isMothertongue;"
+	"					class: 'mothertongue' if: each isMothertongue;"
 					yourself.
 				each levelTag ifNotNil: [ :lt |
 					tag class: ('level-', lt code) ].

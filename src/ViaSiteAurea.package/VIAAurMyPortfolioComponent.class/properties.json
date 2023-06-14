@@ -7,9 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"groupedExercises",
-		"currentUnitaExercises",
-		"currentUnita",
-		"extraExercises"
+		"extraExercises",
+		"currentUnit",
+		"currentUnitExercises"
 	],
 	"name" : "VIAAurMyPortfolioComponent",
 	"type" : "normal"

@@ -10,23 +10,28 @@ renderContentOn: html
 
 		html heading level2; with: [ html t: 'myHome:units'].
 
-		"All units 1-6"
+		"All caputs 1-..."
 		html ukGrid
-			class: 'unitas uk-child-width-1-2';
+			class: 'caputs uk-child-width-1-2';
 			with: [
-				VIAAurHelper toccaunits pairsDo: [ :first :second |
-					| css |
-					css := (VIAAurHelper toccamoduleCssOfToccaunit: first) asString.
-
-					{ first. second } do: [ :index |
-						html div: [
-							html bigAnchorButton
-								class: css;
-								callback: [ self gotoToccaunit: index ];
+				| half all first second |
+				all := VIAAurHelper aureaCaputs.
+				half := all size // 2.
+				first := all copyFrom: 1 to: half.
+				second := all copyFrom: half+1 to: all size.
+				
+				{ first. second } do: [ :group |
+					html div: [
+						group do: [ :index |
+							html div
+								class: 'caput';
 								with: [
-									html sT: 'myHome:unit'.
-									html space.
-									html text: index asString].
+									html anchor
+										callback: [ self gotoAureaCaput: index ];
+										with: [
+											html sT: 'myHome:unit'.
+											html space.
+											html text: index asString]].
 		]]]].
 	
 		html heading level2; with: [ html t: 'myHome:extras'].
@@ -34,13 +39,18 @@ renderContentOn: html
 			class: 'uk-child-width-1-2';
 			with: [
 				html div: [
-					html bigAnchorButton
-						class: 'toccamoduleExtras';
-						callback: [ self gotoToccaunit: 'P' ];
-						with: [html sT: 'myHome:palloncini']].
+					html div
+						class: 'aureaExtras';
+						with: [
+							html anchor
+								callback: [ self gotoAureaCaput: 'P' ];
+								with: [html sT: 'myHome:palloncini']]].
 				html div: [
-					html bigAnchorButton
-						class: 'toccamoduleExtras';
-						callback: [ self gotoToccaunit: 'V' ];
-						with: [html sT: 'myHome:vocabolario']].
-					]]
+					html div
+						class: 'aureaExtras';
+						with: [
+							html anchor
+								class: 'aureaExtras';
+								callback: [ self gotoAureaCaput: 'V' ];
+								with: [html sT: 'myHome:vocabolario']].
+		]]]

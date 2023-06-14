@@ -1,8 +1,8 @@
 rendering
 renderHeaderOn: html
-	html div class: 't-header'; a: 'uk-sticky'; with: [ 
+	html div class: 'aureaHeader'; a: 'uk-sticky'; with: [ 
 		(html ukNavbarOptions: 'dropbar: true; mode: click;')
-			class: 'uk-navbar-transparent uk-light t-menubar';
+			class: 'uk-navbar-transparent uk-light aureaMenubar';
 			with: [
 				self ifViewportSmall: [
 					self renderNavbarSmallContentOn: html ]

@@ -1,4 +1,4 @@
-as yet unclassified
+helpers
 moduleTypeFromFirstIndex: anObject
 	"R = Regular
 	P = Palloncini

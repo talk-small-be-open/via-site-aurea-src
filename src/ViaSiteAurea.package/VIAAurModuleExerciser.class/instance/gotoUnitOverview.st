@@ -1,3 +1,3 @@
 as yet unclassified
 gotoUnitOverview
-	self app gotoToccaunit: model indexCode first
+	self app gotoAureaCaput: model indexCode first

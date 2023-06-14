@@ -1,3 +1,3 @@
-as yet unclassified
+deprecated
 toccamoduleOfModule: aModule
-	^ self toccamoduleFromToccaunit: (self toccaunitOfModule: aModule)
+	^ self toccamoduleFromToccaunit: (self aureaCaputOfModule: aModule)

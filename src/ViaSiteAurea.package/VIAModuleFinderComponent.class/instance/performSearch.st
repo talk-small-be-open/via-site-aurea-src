@@ -5,7 +5,7 @@ performSearch
 	searchQuery clear.
 	
 	search1 ifNotBlank: [
-		search1 isAllDigits ifTrue: [ self selectedToccaunit: search1 asInteger ].
+		search1 isAllDigits ifTrue: [ self selectedAureaCaput: search1 asInteger ].
 		
 		search2 ifBlank: [
 			searchQuery indexCodePartial: search1 asUppercase, '.'

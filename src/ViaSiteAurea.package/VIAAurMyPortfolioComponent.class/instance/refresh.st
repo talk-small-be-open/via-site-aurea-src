@@ -9,6 +9,6 @@ refresh
 		extraExercises addAll: (groupedExercises removeKey: (VIAIndexCode fromString: 'P') ifAbsent: [ #() ]).
 		extraExercises addAll: (groupedExercises removeKey: (VIAIndexCode fromString: 'V') ifAbsent: [ #() ]).
 
-		currentUnita := groupedExercises keys max.
-		currentUnitaExercises := (groupedExercises removeKey: currentUnita ifAbsent: [ #() ])
+		currentUnit := groupedExercises keys max.
+		currentUnitExercises := (groupedExercises removeKey: currentUnit ifAbsent: [ #() ])
 	]

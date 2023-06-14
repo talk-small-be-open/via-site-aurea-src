@@ -9,11 +9,11 @@
 		"search1",
 		"search2",
 		"modules",
-		"selectedToccaunit",
 		"searchQuery",
 		"modulesList",
 		"searchText",
-		"containerId"
+		"containerId",
+		"selectedAureaCaput"
 	],
 	"name" : "VIAModuleFinderComponent",
 	"type" : "normal"

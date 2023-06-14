@@ -1,3 +1,3 @@
 actions
 gotoFirstScreen
-	self gotoToccaunit: 1
+	self gotoAureaCaput: 1

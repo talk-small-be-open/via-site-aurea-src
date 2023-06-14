@@ -2,5 +2,5 @@ as yet unclassified
 loginUser: aUser
 	super loginUser: aUser.
 	
-	currentToccaunit := aUser propertyAt: #preferredToccaunit ifAbsent: [ 1 ].
-	workingToccaunit := currentToccaunit.
+	currentAureaCaput := aUser propertyAt: #preferredAureaCaput ifAbsent: [ 1 ].
+	workingAureaCaput := currentAureaCaput.

@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"currentToccaunit",
-		"workingToccaunit"
+		"currentAureaCaput",
+		"workingAureaCaput"
 	],
 	"name" : "VIAAurDefaultSession",
 	"type" : "normal"
