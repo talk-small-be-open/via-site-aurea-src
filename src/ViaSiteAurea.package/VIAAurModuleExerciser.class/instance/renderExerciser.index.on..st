@@ -29,8 +29,8 @@ renderExerciser: aTaskExerciser index: anInteger on: html
 			class: 'accBar';
 			class: 'ignored' if: exercise isIgnored;
 			class: 'isOpen' if: aTaskExerciser isOpen;
-			class: 'facoltativo' if: aTaskExerciser isFacoltativo;
-			class: 'mothertongue' if: aTaskExerciser isMothertongue.
+			class: 'facoltativo' if: aTaskExerciser isFacoltativo.
+"			class: 'mothertongue' if: aTaskExerciser isMothertongue".
 			
 "		task classification contextTags do: [ :each | divTag class: each code ]."
 		
