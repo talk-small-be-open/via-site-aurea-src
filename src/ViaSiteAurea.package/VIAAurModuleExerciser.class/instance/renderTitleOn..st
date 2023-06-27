@@ -10,8 +10,14 @@ renderTitleOn: html
 
 
 	tag with: [
-		html span class: 'level'; with: [ 
+"		html span class: 'level'; with: [ 
 			html iconLevelTag: model levelTag
-		]. 
+		]."
+		html span: 'Caput '.
+		html span: (VIAAurHelper aureaCaputOfModule: model) asString.
+		html space.
+		html text: ' | '.
+		html span: model indexCode asString.
+		html space.
 		html span: model title.
 	]

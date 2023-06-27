@@ -26,8 +26,8 @@ renderContentOn: html
 					class: 'finished' if: (self currentPortfolio isDoneModule: each);"
 	"					class: 'mothertongue' if: each isMothertongue;"
 					yourself.
-				each levelTag ifNotNil: [ :lt |
-					tag class: ('level-', lt code) ].
+"				each levelTag ifNotNil: [ :lt |
+					tag class: ('level-', lt code) ]."
 				
 				tag with: [
 					html div class: 'moduleEntry'; with: [
@@ -37,9 +37,14 @@ renderContentOn: html
 							callback: [ self gotoModule: each];
 							with: [
 								self renderModule: each on: html ].
-						html span class: 'moduleStatus'; with: [ 
-							showProgress ifTrue: [
-								html iconProgressFromPercent: (self currentPortfolio percentDoneModule: each) ].
+						html span class: 'rightStuff'; with: [
+							html span class: 'moduleStatus'; with: [ 
+								showProgress ifTrue: [
+									html iconProgressFromPercent: (self currentPortfolio percentDoneModule: each) ].
+							].
+							html span class: 'goAhead'; with: [
+								html iconGoAhead
+							].
 						]
 					]
 		]]]]

@@ -1,0 +1,3 @@
+*ViaSiteAurea
+visitViaAurPrLanguageFormat: aViaAurPrLanguageFormat
+	self visitDocumentGroup: aViaAurPrLanguageFormat

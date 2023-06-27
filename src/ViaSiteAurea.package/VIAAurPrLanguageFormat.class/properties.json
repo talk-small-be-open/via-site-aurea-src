@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PRDocumentGroup",
+	"category" : "ViaSiteAurea-Pillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"languageCode"
+	],
+	"name" : "VIAAurPrLanguageFormat",
+	"type" : "normal"
+}
