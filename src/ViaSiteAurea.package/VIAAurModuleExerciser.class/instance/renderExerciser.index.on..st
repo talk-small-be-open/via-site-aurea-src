@@ -21,7 +21,7 @@ renderExerciser: aTaskExerciser index: anInteger on: html
 		
 		exercise isIgnored ifFalse: [
 			divTag
-				ukToggleTarget: ('#', id) class: 'hiddenTaskExercise' "animation: 'uk-animation-fade'";
+				ukToggleTarget: ('#', id) class: 'hiddenTaskExercise';
 				onClick: (self jsForClickExerciser: aTaskExerciser titleId: divTag ensureId bodyId: id on: html)
 		].
 	
@@ -30,7 +30,7 @@ renderExerciser: aTaskExerciser index: anInteger on: html
 			class: 'ignored' if: exercise isIgnored;
 			class: 'isOpen' if: aTaskExerciser isOpen;
 			class: 'facoltativo' if: aTaskExerciser isFacoltativo.
-"			class: 'mothertongue' if: aTaskExerciser isMothertongue".
+"			class: 'mothertongue' if: aTaskExerciser isMothertongue"
 			
 "		task classification contextTags do: [ :each | divTag class: each code ]."
 		
