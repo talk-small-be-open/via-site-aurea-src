@@ -1,10 +1,12 @@
 rendering-visitor
 renderTextListInput: aTextListInput on: html
-	| answerValue answerCollection mainId |
+	| answerValue answerCollection mainId shuffledHintFragments |
 
 	answerValue := exercise answerOf: aTextListInput.
 	answerCollection := answerValue value.
 	mainId := html nextId.
+	
+	shuffledHintFragments := exercise propertyAt: #shuffledHintFragments of: aTextListInput.
 
 	html div
 		id: mainId;
@@ -17,14 +19,26 @@ renderTextListInput: aTextListInput on: html
 			self renderHintSymbolOf: aTextListInput on: html.
 			
 			"List of clickable hint texts"
-			aTextListInput hintFragments ifNotBlank: [ :fragments |
+			shuffledHintFragments ifNotBlank: [ :fragments |
 				html div class: 'hintFragments'; with: [
 					fragments do: [ :each |
 						html span
 							class: 'hintFragment';
-							onClick: ( (JSStream on: 'addTextToListInput') apply: { mainId. each. } );
+							onClick: ( (JSStream on: 'listInput_addText') apply: { mainId. each. } );
 							with: each
-					]
+					].
+
+					html div class: 'hintTools'; with: [
+						html clickButton: ( (JSStream on: 'listInput_addSpace') apply: { mainId } ) with: [
+"							html iconSpace; space."
+							html text: 'Leerschlag' ].
+						
+						html space.
+
+						html clickButton: ( (JSStream on: 'listInput_gotoNextLine') apply: { mainId } ) with: [
+							html iconNewline; space.
+							html text: 'Weiter' ] ]
+
 				]
 			].
 			

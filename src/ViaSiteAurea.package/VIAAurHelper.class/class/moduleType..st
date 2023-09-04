@@ -2,7 +2,7 @@ helpers
 moduleType: aModule
 	| first |
 	"R = Regular
-	P = Palloncini
+	C = Commentatio
 	V = Vocabolario"
 
 	first := aModule indexCode first.

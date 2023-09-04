@@ -4,7 +4,7 @@ renderLastUsedOn: html
 	html heading level2; with: [ html t: 'myHome:lastVisited'].
 
 	m := self currentPortfolio lastOpenedModule.
-	p := self currentPortfolio lastOpenedPalloncini.
+	p := self currentPortfolio lastOpenedCommentatio.
 	v := self currentPortfolio lastOpenedVocabolario.
 
 	empty := m isNil and: [ p isNil and: [ v isNil ] ].
@@ -32,7 +32,7 @@ renderLastUsedOn: html
 "						class: (VIAAurHelper toccamoduleCssOfModule: p);"
 						callback: [ self gotoModule: p ];
 						with: [
-							html sT: 'myHome:gotoCurrentPalloncini'.
+							html sT: 'myHome:gotoCurrentCommentatio'.
 							html space.
 							html text: p indexCodeString].
 			]].

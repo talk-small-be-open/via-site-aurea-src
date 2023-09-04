@@ -19,15 +19,15 @@ renderFastAccessMenuOn: html
 						"html space."
 						html sT: 'main:fastAccess:unita']]
 		].
-		active := (moduleType = 'P').
+		active := (moduleType = 'C').
 		html listItem class: 'active' if: active; with: [
 			html anchor
 				callback: [ self gotoSmartCommentatio ];
 				with: [
-					html iconPallonciniActive: active.
+					html iconCommentatioActive: active.
 					html span class: 'menuLabel uk-visible@l'; with: [
 						"html space."
-						html sT: 'main:fastAccess:palloncini']]
+						html sT: 'main:fastAccess:commentatio']]
 		].
 		active := (moduleType = 'V').
 		html listItem class: 'active' if: active; with: [

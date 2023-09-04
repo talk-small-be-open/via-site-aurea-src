@@ -52,8 +52,8 @@ renderContentOn: html
 						with: [
 							html anchor
 								class: 'gotoExtra';
-								callback: [ self gotoAureaCaput: 'P' ];
-								with: [html sT: 'myHome:palloncini'].
+								callback: [ self gotoAureaCaput: 'C' ];
+								with: [html sT: 'myHome:commentatio'].
 							html span class: 'goAhead'; with: [
 								html iconGoAhead
 					]]

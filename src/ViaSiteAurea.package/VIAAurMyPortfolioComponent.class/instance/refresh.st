@@ -6,7 +6,7 @@ refresh
 		groupedExercises := self currentPortfolio exercisesByIndexCode.
 		
 		extraExercises := OrderedCollection new.
-		extraExercises addAll: (groupedExercises removeKey: (VIAIndexCode fromString: 'P') ifAbsent: [ #() ]).
+		extraExercises addAll: (groupedExercises removeKey: (VIAIndexCode fromString: 'C') ifAbsent: [ #() ]).
 		extraExercises addAll: (groupedExercises removeKey: (VIAIndexCode fromString: 'V') ifAbsent: [ #() ]).
 
 		currentUnit := groupedExercises keys max.
