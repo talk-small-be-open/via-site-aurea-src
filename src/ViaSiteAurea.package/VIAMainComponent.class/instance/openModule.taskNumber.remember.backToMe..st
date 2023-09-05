@@ -21,8 +21,8 @@ openModule: aModule taskNumber: aTaskNumber remember: aBoolean backToMe: aBackBo
 					lastOpenedModule: aModule.
 			]
 			ifFalse: [
-				(VIAAurHelper isVocabolarioModule: aModule) ifTrue: [ 
-					self currentPortfolio lastOpenedVocabolario: aModule.
+				(VIAAurHelper isVocabuloModule: aModule) ifTrue: [ 
+					self currentPortfolio lastOpenedVocabulo: aModule.
 				].
 				(VIAAurHelper isCommentatioModule: aModule) ifTrue: [ 
 					self currentPortfolio lastOpenedCommentatio: aModule.

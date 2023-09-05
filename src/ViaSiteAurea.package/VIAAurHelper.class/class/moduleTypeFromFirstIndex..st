@@ -2,6 +2,6 @@ helpers
 moduleTypeFromFirstIndex: anObject
 	"R = Regular
 	C = Commentatio
-	V = Vocabolario"
+	V = Vocabulo"
 	anObject isNumber ifTrue: [ ^ 'R' ].
 	^ anObject

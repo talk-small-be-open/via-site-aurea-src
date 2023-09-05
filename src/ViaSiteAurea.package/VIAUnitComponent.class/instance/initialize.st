@@ -8,4 +8,4 @@ initialize
 	
 	self session currentAureaCaput: unitNumber.
 	
-	showProgress := (VIAAurHelper isVocabolarioCode: unitNumber) not.
+	showProgress := (VIAAurHelper isVocabuloCode: unitNumber) not.

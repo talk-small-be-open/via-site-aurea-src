@@ -34,9 +34,9 @@ renderFastAccessMenuOn: html
 			html anchor
 				callback: [ self gotoSmartVocabula ];
 				with: [
-					html iconVocabolarioActive: active.
+					html iconVocabuloActive: active.
 					html span class: 'menuLabel uk-visible@l'; with: [
 						"html space."
-						html sT: 'main:fastAccess:vocabolario'
+						html sT: 'main:fastAccess:vocabulo'
 					]]
 		]

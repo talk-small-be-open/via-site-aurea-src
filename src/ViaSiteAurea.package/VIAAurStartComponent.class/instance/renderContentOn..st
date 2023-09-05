@@ -65,7 +65,7 @@ renderContentOn: html
 							html anchor
 								class: 'gotoExtra';
 								callback: [ self gotoAureaCaput: 'V' ];
-								with: [html sT: 'myHome:vocabolario'].
+								with: [html sT: 'myHome:vocabulo'].
 							html span class: 'goAhead'; with: [
 								html iconGoAhead
 							].

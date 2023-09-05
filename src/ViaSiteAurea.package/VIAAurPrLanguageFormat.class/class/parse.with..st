@@ -1,9 +1,19 @@
 instance creation
 parse: aString with: aParser
-	| string languageCode |
-	string := aString allButFirst: self markupBegin size.
-	languageCode := string copyUpTo: Character space.
-	string := string copyAfter: Character space.
-	string := string allButLast: self markupEnd size.
+	| innerString pillarString languageCode |
 	
-	^ self withAll: (aParser parseTopText: string) languageCode: languageCode.
+	"Syntax: [l blablabla]
+	l = 1 char, for language"
+	
+	innerString := aString allButFirst: self markupBegin size.
+	innerString := innerString allButLast: self markupEnd size.
+
+	languageCode := innerString copyUpTo: Character space.
+	pillarString := innerString copyAfter: Character space.
+	
+	"unmatched syntax, fallback to simple text"
+	(pillarString isEmpty or: [ languageCode size > 1 ]) ifTrue: [
+		^ (PRText content: aString)
+	].
+	
+	^ self withAll: (aParser parseTopText: pillarString) languageCode: languageCode.

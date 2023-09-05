@@ -5,7 +5,7 @@ renderLastUsedOn: html
 
 	m := self currentPortfolio lastOpenedModule.
 	p := self currentPortfolio lastOpenedCommentatio.
-	v := self currentPortfolio lastOpenedVocabolario.
+	v := self currentPortfolio lastOpenedVocabulo.
 
 	empty := m isNil and: [ p isNil and: [ v isNil ] ].
 	
@@ -42,7 +42,7 @@ renderLastUsedOn: html
 "						class: (VIAAurHelper toccamoduleCssOfModule: v);"
 						callback: [ self gotoModule: v ];
 						with: [
-							html sT: 'myHome:gotoCurrentVocabolario'.
+							html sT: 'myHome:gotoCurrentVocabulo'.
 							html space.
 							html text: v indexCodeString].
 			]].
