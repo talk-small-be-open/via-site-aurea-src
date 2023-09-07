@@ -34,7 +34,7 @@ renderContentOn: html
 											with: [
 												html sT: 'myHome:unit'.
 												html space.
-												html text: index asString].
+												html capitalis: (VIAAurHelper dec2Roman: index)].
 										html span class: 'goAhead'; with: [
 											html iconGoAhead
 										].

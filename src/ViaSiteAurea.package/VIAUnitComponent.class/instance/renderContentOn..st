@@ -15,7 +15,7 @@ renderContentOn: html
 		self renderLegendOn: html.
 
 		html heading level1; with: [
-			html sT: ('aurea:caput', unitNumber asString) ].
+			html t: ('aurea:caput', unitNumber asString) ].
 
 		
 		html ukList class: 'modulesList'; with: [
