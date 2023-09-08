@@ -1,10 +1,13 @@
 rendering-visitor
 renderTextListInput: aTextListInput on: html
-	| answerValue answerCollection mainId shuffledHintFragments |
+	| answerValue answerCollection linesId mainId shuffledHintFragments typingAssisted isFixedLines |
 
 	answerValue := exercise answerOf: aTextListInput.
 	answerCollection := answerValue value.
 	mainId := html nextId.
+	linesId := html nextId.
+	typingAssisted := aTextListInput withTypingAssistant.
+	isFixedLines := aTextListInput hasMaxSolutionsCount.
 	
 	shuffledHintFragments := exercise propertyAt: #shuffledHintFragments of: aTextListInput.
 
@@ -22,18 +25,23 @@ renderTextListInput: aTextListInput on: html
 			shuffledHintFragments ifNotBlank: [ :fragments |
 				html div class: 'hintFragments'; with: [
 					fragments do: [ :each |
-						html span
+						| span |
+						span := html span
 							class: 'hintFragment';
-							onClick: ( (JSStream on: 'listInput_addText') apply: { mainId. each. } );
-							with: each
+							yourself.
+							
+						typingAssisted ifTrue: [
+							span
+								class: 'typingAssisted';
+								onClick: ( (JSStream on: 'listInput_addText') apply: { mainId. each. aTextListInput isWholeWordsOnly } )
+						].
+						span with: each
 					].
 
 					html div class: 'hintTools'; with: [
-						html clickButton: ( (JSStream on: 'listInput_addSpace') apply: { mainId } ) with: [
-"							html iconSpace; space."
+"						html clickButton: ( (JSStream on: 'listInput_addSpace') apply: { mainId } ) with: [
 							html text: 'Leerschlag' ].
-						
-						html space.
+						html space."
 
 						html clickButton: ( (JSStream on: 'listInput_gotoNextLine') apply: { mainId } ) with: [
 							html iconNewline; space.
@@ -42,46 +50,27 @@ renderTextListInput: aTextListInput on: html
 				]
 			].
 			
-			html div class: 'textInputs'; with: [
-				answerCollection withIndexDo: [:text :index |
-					| isCorrect isWrong |
-					text ifNotBlank: [
-						isCorrect := aTextListInput isSolution: text.
-						isWrong := isCorrect not ].
-
-					html div: [
-						| id jsSave |
-"						html span class: 'lineNumber'; with: index asString."
-						
-						"JS for locally saving the last focused cursor position"
-						jsSave := ((html jQuery id: mainId)
-							dataAt: 'lastInputElement' put: (JSStream this);
-							dataAt: 'lastPosition' put: (JSStream this access: 'selectionStart')
-						).
-						
-						html textInput
-							noAuto;
-							id: (id := html nextId);
-							class: 'textListInput';
-							class: 'wrong' if: (self isca: isWrong);
-							class: 'correct' if: (self isca: isCorrect);
-							onClick: jsSave;
-							onKeyUp: jsSave;
-							callback: [ :value |
-								answerCollection at: index put: (self sanitizeUserTextInput: value).
-							];
-							with: text.
-
-						html span
-							class: 'clearLine';
-							onClick: (((html jQuery id: id) value: '') removeClass: 'correct wrong') triggerFocus;
-							with: [ html iconDelete ]
-					]]].
+			html div class: 'textListLines'; id: linesId; with: [
+				answerCollection withIndexDo: [ :text :index |
+					self renderTextListInput: aTextListInput line: text number: index mainTagId: mainId on: html
+			]].
 		
-			html ukSubmitButton
-				callback: [ answerCollection addAll: (Array new: 5 withAll: nil) ];
-				with: '... Zeilen hinzufügen'.
-			html ukSubmitButton
-				callback: [ answerCollection removeAllSuchThat: [ :each | each isBlank ] ];
-				with: 'Leere Zeilen entfernen'
+			isFixedLines ifFalse: [
+"				html ukSubmitButton
+					callback: [
+						answerCollection addAll: (Array new: 5 withAll: nil) ];
+					with: '... Zeilen hinzufügen'."
+					
+				html
+					clickButton: (html jQuery ajax
+						script: [ :s |
+							answerCollection add: nil.
+							s << ((s jQuery id: linesId) append: [ :h | self renderTextListInput: aTextListInput line: '' number: answerCollection size mainTagId: mainId on: h ])
+						])
+					with: [
+						html iconAdd; space.
+						html text: 'Zeile hinzufügen' ].
+					
+			].
+
 		]
