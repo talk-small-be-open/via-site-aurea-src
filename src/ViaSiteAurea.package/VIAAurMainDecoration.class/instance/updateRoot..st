@@ -10,8 +10,9 @@ updateRoot: anHtmlRoot
 	
 	"OPTIMIZE: Performance?"
 	self updateRootPwa: anHtmlRoot.
-	"Font zeitung pro"
-	anHtmlRoot stylesheet url: 'https://use.typekit.net/yba2pyn.css'.
+
+	"Fonts für Aurea (Edith)"
+	anHtmlRoot stylesheet url: 'https://use.typekit.net/qxs6zrg.css'.
 
 	"We use some outofthebox components"
 "	anHtmlRoot javascript defer; url: '/js/outofthebox/highlight_areas_v2.js'"
