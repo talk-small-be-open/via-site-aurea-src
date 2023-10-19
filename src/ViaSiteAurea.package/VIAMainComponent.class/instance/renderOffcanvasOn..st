@@ -10,7 +10,7 @@ renderOffcanvasOn: html
 				html div
 					class: 'uk-offcanvas-close';
 "					a: 'uk-close';"
-					with: [ html iconClose ].
+					with: [ html iconOffcanvasClose ].
 
 				html div class: 'mainMenuContainer'; with: [
 					html div

@@ -1,7 +1,9 @@
 rendering
 renderContentOn: html
 	html div class: 'aureaBanner'; with: [
-		html image class: 'bannerImage'; url: '/site/images/public_banner.jpg'].
+		html image class: 'bannerImage'; url: '/site/images/public_banner.jpg'.
+		html span class: 'bannerText'; with: 'AURREA AUREA'
+	].
 
 	html ukContainer: [
 		html div class: 'loginSection'; with: [
