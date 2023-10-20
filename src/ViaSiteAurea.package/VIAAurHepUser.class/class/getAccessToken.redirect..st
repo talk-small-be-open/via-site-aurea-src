@@ -1,6 +1,8 @@
 as yet unclassified
-getAccessToken
+getAccessToken: aCodeString redirect: aRedirectString
 	| postData response |
+
+	"TODO: Why the hell do we need the aRedirectString for? Its a server-to-server, so why redirect?! Ask novu"
 
 	"OPTIMIZE: redirect_uri not needed but maybe API wants it? Check it."
 	postData := {
@@ -8,8 +10,8 @@ getAccessToken
 		'client_secret'->self oauthSecret.
 		'grant_type'->'authorization_code'.
 		'response_type'->'code'.
-"		'code'->aString.
-		'redirect_uri'->((self ssoCallbackUrl: aWebsite) asString)."
+		'code'->aCodeString.
+		'redirect_uri'->aRedirectString.
 	} aD.
 	
 	response := self postData: postData endpoint: '/oauth/token'.

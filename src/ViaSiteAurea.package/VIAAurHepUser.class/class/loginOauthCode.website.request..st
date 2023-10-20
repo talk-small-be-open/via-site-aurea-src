@@ -1,6 +1,6 @@
 as yet unclassified
 loginOauthCode: aString website: aWebsite request: aRequest
-	| postData response data apiToken instance |
+	| data apiToken instance |
 
 	"OPTIMIZE: redirect_uri not needed but maybe API wants it? Check it."
 "	postData := {
@@ -22,7 +22,7 @@ loginOauthCode: aString website: aWebsite request: aRequest
 	
 	apiToken := response at: 'access_token'."
 
-	apiToken := self getAccessToken.
+	apiToken := self getAccessToken: aString redirect: ((self ssoCallbackUrl: aWebsite) asString).
 
 	"Get users data. Needed for validation-ok, email changes, ..."
 	data := self getUserData: apiToken.
