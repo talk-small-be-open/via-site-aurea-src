@@ -1,9 +1,8 @@
 as yet unclassified
 findOrCreateViaUserWebsite: aWebsite
-	| socialId viaUser |
-	socialId := 'hep_id_', self hepId asString.
+	| viaUser |
 	
-	viaUser := aWebsite data findOrCreateUserBySocialId: socialId email: email.
+	viaUser := aWebsite data findOrCreateUserBySocialId: self viaSocialId email: email.
 
 	viaUser
 		firstName: firstName;

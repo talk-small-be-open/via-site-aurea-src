@@ -1,8 +1,15 @@
 rendering
 renderContentOn: html
 	html div class: 'aureaBanner'; with: [
+		html div class: 'bannerText'; with: [
+			html div class: 'bannerTextTitle'; with: 'AUREA BULLA'.
+			html div class: 'bannerTextSubtitle'; with: [
+				html text: 'Latein.'; break.
+				html text: 'Mehrsprachigkeit.'; break.
+				html text: 'Kulturgeschichte.'; break.
+			].
+		].
 		html image class: 'bannerImage'; url: '/site/images/public_banner.jpg'.
-		html span class: 'bannerText'; with: 'AURREA AUREA'
 	].
 
 	html ukContainer: [
