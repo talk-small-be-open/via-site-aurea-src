@@ -15,7 +15,7 @@ renderTitleOn: html
 		]."
 		html span: 'Caput '.
 		html span: (VIAAurHelper aureaCaputOfModule: model) asString.
-		html text: ' | '.
+		html span class: 'divider'; with: '|'.
 		html span: model indexCode asString.
 		html space.
 		html span: model title.

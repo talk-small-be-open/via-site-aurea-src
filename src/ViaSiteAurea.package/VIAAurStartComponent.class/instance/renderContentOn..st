@@ -32,12 +32,13 @@ renderContentOn: html
 											class: 'gotoCaput';
 											callback: [ self gotoAureaCaput: index ];
 											with: [
-												html sT: 'myHome:unit'.
-												html space.
-												html capitalis: (VIAAurHelper dec2Roman: index)].
-										html span class: 'goAhead'; with: [
-											html iconGoAhead
-										].
+												html span class: 'entryTitle'; with: [
+													html sT: 'myHome:unit'.
+													html space.
+													html capitalis: (VIAAurHelper dec2Roman: index) ].
+												html span class: 'goAhead'; with: [
+													html iconGoAhead ]
+											].
 									].
 								].
 		]]]].
@@ -53,9 +54,11 @@ renderContentOn: html
 							html anchor
 								class: 'gotoExtra';
 								callback: [ self gotoAureaCaput: 'C' ];
-								with: [html sT: 'myHome:commentatio'].
-							html span class: 'goAhead'; with: [
-								html iconGoAhead
+								with: [
+									html span class: 'entryTitle'; with: [
+										html sT: 'myHome:commentatio' ].
+									html span class: 'goAhead'; with: [
+										html iconGoAhead ]
 					]]
 				].
 				html div class: 'aureaExtra'; with: [
@@ -65,9 +68,12 @@ renderContentOn: html
 							html anchor
 								class: 'gotoExtra';
 								callback: [ self gotoAureaCaput: 'V' ];
-								with: [html sT: 'myHome:vocabulo'].
-							html span class: 'goAhead'; with: [
-								html iconGoAhead
-							].
+								with: [
+									html span class: 'entryTitle'; with: [
+										html sT: 'myHome:vocabulo' ].
+									html span class: 'goAhead'; with: [
+										html iconGoAhead
+									].
+								]
 						].
 		]]]

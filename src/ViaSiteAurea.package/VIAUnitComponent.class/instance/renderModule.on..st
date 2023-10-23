@@ -11,3 +11,12 @@ renderModule: each on: html
 		self renderAttributesModule: each on: html
 	].
 	
+	html span class: 'rightStuff'; with: [
+		html span class: 'moduleStatus'; with: [ 
+			showProgress ifTrue: [
+				html iconProgressFromPercent: (self currentPortfolio percentDoneModule: each) ].
+		].
+		html span class: 'goAhead'; with: [
+			html iconGoAhead
+		].
+	]
