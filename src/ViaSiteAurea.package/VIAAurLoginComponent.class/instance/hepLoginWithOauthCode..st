@@ -7,7 +7,7 @@ hepLoginWithOauthCode: aString
 	[
 		hepUser := VIAAurHepUser loginOauthCode: aString website: self website request: self requestContext request.
 		viaUser := hepUser syncViaUserFromWebsite: self website.
-	] on: VIAAurHepUserError do: [ :error |
+	] on: VIAHepUserError do: [ :error |
 		loginOk := false.
 		messageKey := 'login:hepLoginError'.
 		hepErrorMessage := error messageText.
