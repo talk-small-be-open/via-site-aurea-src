@@ -24,6 +24,7 @@ renderTextListInput: aTextListInput on: html
 			"List of clickable hint texts"
 			shuffledHintFragments ifNotBlank: [ :fragments |
 				html div class: 'hintFragments'; with: [
+					"Fragments are pillar documents"
 					fragments do: [ :each |
 						| span |
 						span := html span
@@ -33,9 +34,9 @@ renderTextListInput: aTextListInput on: html
 						typingAssisted ifTrue: [
 							span
 								class: 'typingAssisted';
-								onClick: ( (JSStream on: 'listInput_addText') apply: { mainId. each. aTextListInput isWholeWordsOnly } )
+								onClick: ( (JSStream on: 'listInput_addText') apply: { mainId. each text. aTextListInput isWholeWordsOnly } )
 						].
-						span with: each
+						span with: [ html pillar: each ]
 					].
 
 					html div class: 'hintTools'; with: [
