@@ -1,0 +1,3 @@
+icons
+iconGlossaryActive
+	self iconGlossary

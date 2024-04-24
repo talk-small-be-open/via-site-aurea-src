@@ -18,7 +18,8 @@ renderGlossary: aGlossary on: html
 			html textInput
 				class: 'searchText';
 				onInput: ((html jsWindow call: 'glossary_liveSearch' with: gId) asFunction debounce: 500);
-				placeholder: 'Suchen...'.
+				preventEnterFormSubmit;
+				placeholder: ('exerciser:glossary:search't).
 		].
 		
 		html div class: 'glossaryBody'; with: [

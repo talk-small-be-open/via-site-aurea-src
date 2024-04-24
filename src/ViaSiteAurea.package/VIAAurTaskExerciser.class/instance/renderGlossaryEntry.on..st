@@ -5,6 +5,14 @@ renderGlossaryEntry: aGlossaryEntry on: html
 		id: aGlossaryEntry htmlId;
 		class: 'section' if: aGlossaryEntry isSection;
 		with: [ 
-			html tableData class: 'title'; with: aGlossaryEntry title.
+			html tableData class: 'title'; with: [
+"				html span class: 'referenceCode'; beHidden; with: (VIAHelper sanitizeToLatin1: aGlossaryEntry title)."
+				
+				aGlossaryEntry isSyntaxEmpty ifTrue: [
+					html text: aGlossaryEntry title
+				] ifFalse: [
+					html pillar: aGlossaryEntry syntax pillarDocument
+				].
+			].
 			html tableData class: 'description'; with: [ 
 				html pillar: aGlossaryEntry description pillarDocument ] ]

@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "AndreasBrodbeck 7/1/2020 09:34",
-	"super" : "VIAHepUser",
+	"super" : "AnObsoleteVIAHepUser",
 	"category" : "ViaSiteAurea-Model",
 	"classinstvars" : [ ],
 	"pools" : [ ],

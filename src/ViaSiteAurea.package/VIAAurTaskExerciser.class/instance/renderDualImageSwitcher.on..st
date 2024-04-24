@@ -26,7 +26,7 @@ renderDualImageSwitcher: anImageSwitcher on: html
 						html space.
 						html text: anImageSwitcher switchText ]
 				].
-				html printThisButton: ('#', id, ' .image:not(.hidden) img').
+				html printThisButton: ('#', id, ' .image:not(.hidden)').
 			]
 		].
 

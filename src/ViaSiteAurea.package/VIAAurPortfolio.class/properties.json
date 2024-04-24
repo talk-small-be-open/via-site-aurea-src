@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAPortfolio",
+	"category" : "ViaSiteAurea-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"lastOpenedCommentatio",
+		"lastOpenedVocabulo"
+	],
+	"name" : "VIAAurPortfolio",
+	"type" : "normal"
+}
