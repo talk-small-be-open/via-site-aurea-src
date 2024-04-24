@@ -16,7 +16,7 @@ renderModule: each on: html
 			showProgress ifTrue: [
 				html iconProgressFromPercent: (self currentPortfolio percentDoneModule: each) ].
 		].
-		html span class: 'goAhead'; with: [
+		html span with: [
 			html iconGoAhead
 		].
 	]
