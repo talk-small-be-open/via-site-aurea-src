@@ -8,7 +8,7 @@ renderNavbarContentOn: html
 	html div class: 'menubarCenter'; with: [
 		html unorderedList class: 'uk-navbar-nav uk-margin-right'; with: [
 			html listItem
-				class: 'activeHome' if: (self activeCoreComponent isKindOf: VIAAurStartComponent);
+				class: 'active' if: (self activeCoreComponent isKindOf: VIAAurStartComponent);
 				with: [
 					html anchor
 						callback: [ self gotoAureaStart ];
