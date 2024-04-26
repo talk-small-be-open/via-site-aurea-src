@@ -3,6 +3,9 @@ gotoGlossary
 "	self gotoModule: glossaryModule"
 	
 	| exerciser |
+	
+	glossaryModule ifNil: [ ^ self ].
+	
 	exerciser := (VIAAurMainGlossaryExerciser model: glossaryModule).
 
 "	exerciser closeAllTasksButLastUsed."

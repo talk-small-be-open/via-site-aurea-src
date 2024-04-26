@@ -18,3 +18,5 @@ initializeAureaMenu
 	entry icon: 'commentatio'.
 	entry := subMenu addEntry: 'menu:aurea:vocabulo' send: #gotoSmartVocabula to: self.
 	entry icon: 'vocabulo'.
+	entry := subMenu addEntry: 'menu:aurea:glossary' send: #gotoGlossary to: self.
+	entry icon: 'glossary'.

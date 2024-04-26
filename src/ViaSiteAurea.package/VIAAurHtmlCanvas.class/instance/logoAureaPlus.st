@@ -1,4 +1,5 @@
 icons
 logoAureaPlus
 	self logoAurea.
-	self span: 'TBD +LP'
+"	self span: '+LP'"
+"	self span style: 'font-size: 50%'; with: '+'"

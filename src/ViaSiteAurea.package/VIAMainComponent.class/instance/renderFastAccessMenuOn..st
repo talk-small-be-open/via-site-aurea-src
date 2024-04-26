@@ -12,7 +12,7 @@ renderFastAccessMenuOn: html
 				html iconCaput.
 				html span class: 'menuLabel uk-visible@l'; with: [
 					"html space."
-					html sT: 'main:fastAccess:unita']]
+					html sT: 'main:fastAccess:caput']]
 	].
 	active := (moduleType = 'C').
 	html listItem class: 'active' if: active; with: [
