@@ -10,7 +10,7 @@ renderLastUsedOn: html
 	empty := m isNil and: [ p isNil and: [ v isNil ] ].
 	
 	html ukGrid
-		class: 'uk-flex-left uk-child-width-1-1 uk-child-width-1-3@l';
+		class: 'uk-flex-left uk-child-width-1-1 uk-child-width-1-3@xl';
 		with: [
 			empty ifTrue: [ 
 				html div pT: 'myHome:lastVisited:none'

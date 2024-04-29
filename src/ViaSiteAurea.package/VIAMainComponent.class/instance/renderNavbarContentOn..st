@@ -1,12 +1,12 @@
 rendering
 renderNavbarContentOn: html
 	"uk-navbar-left"
-	html div class: 'menubarLeft'; with: [
+	html div class: 'menubarLeft uk-margin-right'; with: [
 		self renderLogoOn: html.
 	].
 "	html div class: 'uk-navbar-center'; with: ["
-	html div class: 'menubarCenter'; with: [
-		html unorderedList class: 'uk-navbar-nav uk-margin-right'; with: [
+	html div class: 'menubarCenter uk-margin-right'; with: [
+		html unorderedList class: 'uk-navbar-nav'; with: [
 			html listItem
 				class: 'active' if: (self activeCoreComponent isKindOf: VIAAurStartComponent);
 				with: [

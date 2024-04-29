@@ -8,8 +8,8 @@ renderModuleExercises: aCollection on: html
 				module := each module.
 				tag := html listItem
 					yourself.
-				module levelTag ifNotNil: [ :lt |
-					tag class: ('level-', lt code) ].
+"				module levelTag ifNotNil: [ :lt |
+					tag class: ('level-', lt code) ]."
 				
 				tag with: [
 					html div class: 'moduleEntry'; with: [

@@ -3,15 +3,18 @@ renderBackishButtonOn: html
 	previousComponent
 		ifNil: [
 			html anchor
+				class: 'back';
 				callback: [ self gotoUnitOverview ];
 				with: [
 					html iconBackUp.
 			"					html span class: 'backText uk-visible@l'; t: 'moduleExerciser:gotoOverview'"
 			]	]
 		ifNotNil: [ 
-			html anchorButton
+			html anchor
+				class: 'back';
 				callback: [ self backToPreviousComponent ];
-				with: [ 
+				with: [
+					html iconBack.
 					html sT: 'general:back'
 			"					html span class: 'backText uk-visible@l'; t: 'moduleExerciser:gotoOverview'"
 				]

@@ -10,7 +10,3 @@ default
 		withRegexp: VIAAurHelper regexpIndexCode.
 		
 	self validateUniqueIndexCode
-
-"	self validateFormat
-		of: #exerciseLevel named: 'module:level';
-		withRegexp: '[A|B|C]\d'"

@@ -36,7 +36,7 @@ renderContentOn: html
 													html sT: 'myHome:unit'.
 													html space.
 													html capitalis: (VIAAurHelper dec2Roman: index) ].
-												html span class: 'goAhead'; with: [
+												html span class: 'entryGoAhead uk-visible@l'; with: [
 													html iconGoAhead ]
 											].
 									].
@@ -57,7 +57,7 @@ renderContentOn: html
 								with: [
 									html span class: 'entryTitle'; with: [
 										html sT: 'myHome:commentatio' ].
-									html span class: 'goAhead'; with: [
+									html span class: 'entryGoAhead uk-visible@l'; with: [
 										html iconGoAhead ]
 					]]
 				].
@@ -71,7 +71,7 @@ renderContentOn: html
 								with: [
 									html span class: 'entryTitle'; with: [
 										html sT: 'myHome:vocabulo' ].
-									html span class: 'goAhead'; with: [
+									html span class: 'entryGoAhead uk-visible@l'; with: [
 										html iconGoAhead
 									].
 								]

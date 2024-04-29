@@ -4,6 +4,7 @@ renderGlossaryEntry: aGlossaryEntry on: html
 		class: 'glossaryEntry';
 		id: aGlossaryEntry htmlId;
 		class: 'section' if: aGlossaryEntry isSection;
+		attributeAt: 'data-simple-term' put: aGlossaryEntry simpleTerm;
 		with: [ 
 			html tableData class: 'title'; with: [
 "				html span class: 'referenceCode'; beHidden; with: (VIAHelper sanitizeToLatin1: aGlossaryEntry title)."

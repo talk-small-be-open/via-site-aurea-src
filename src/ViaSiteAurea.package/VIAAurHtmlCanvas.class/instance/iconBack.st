@@ -1,3 +1,4 @@
 icons
 iconBack
-	^self ukIcon: 'chevron-double-left'
+	"'chevron-double-left'"
+	^self ukIcon: 'arrow-left'

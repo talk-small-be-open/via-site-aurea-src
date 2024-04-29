@@ -28,8 +28,8 @@ renderExerciser: aTaskExerciser index: anInteger on: html
 		divTag
 			class: 'accBar';
 			class: 'ignored' if: exercise isIgnored;
-			class: 'isOpen' if: aTaskExerciser isOpen;
-			class: 'facoltativo' if: aTaskExerciser isFacoltativo.
+			class: 'isOpen' if: aTaskExerciser isOpen.
+"			class: 'facoltativo' if: aTaskExerciser isFacoltativo."
 "			class: 'mothertongue' if: aTaskExerciser isMothertongue"
 			
 "		task classification contextTags do: [ :each | divTag class: each code ]."
@@ -42,7 +42,7 @@ renderExerciser: aTaskExerciser index: anInteger on: html
 					lt isUsingIcon ifTrue: [
 						html span class: 'level'; with: [ 
 							html iconLevelTag: lt]
-				]]. 
+				]].
 
 				html heading level3; class: 'accTitle'; with: title.
 				task classification activityTypeTags ifNotEmpty: [ :all |

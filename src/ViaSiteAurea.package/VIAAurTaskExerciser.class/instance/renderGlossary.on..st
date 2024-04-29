@@ -13,7 +13,11 @@ renderGlossary: aGlossary on: html
 						class: 'jumper';
 						onClick: (html jsWindow call: 'glossary_jumpTo' with: gId with: each htmlId);
 						with: each title
-				]
+				].
+				html span
+					class: 'jumper';
+					onClick: (html jsWindow call: 'glossary_reset' with: gId);
+					sT: 'exerciser:glossary:showAll'
 			].
 			html textInput
 				class: 'searchText';
