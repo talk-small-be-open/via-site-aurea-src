@@ -2,10 +2,10 @@ initialization
 initialize
 	super initialize.
 	
-	self addContainerDiv. "addClass: (VIAAurHelper toccamoduleCssOfToccaunit: unitNumber)."
+	self addContainerDiv.
 	
 	self initializeModules.
 	
 	self session currentAureaCaput: unitNumber.
 	
-	showProgress := (VIAAurHelper isVocabuloCode: unitNumber) not.
+	showProgress := (VIAAurHelper isVocabulaCode: unitNumber) not.

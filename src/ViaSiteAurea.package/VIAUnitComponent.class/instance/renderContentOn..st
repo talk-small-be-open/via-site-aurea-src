@@ -15,9 +15,8 @@ renderContentOn: html
 		self renderLegendOn: html.
 
 		html heading level1; with: [
-			html sT: 'aurea:caput'.
-			html space.
-			html capitalis: (VIAAurHelper dec2Roman: unitNumber) ].
+			VIAAurHelper renderUnitLabel: unitNumber on: html.
+		].
 
 		
 		html ukList class: 'modulesList'; with: [

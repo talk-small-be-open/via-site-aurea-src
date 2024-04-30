@@ -8,7 +8,7 @@ renderModuleExercisesOn: html
 		| unitNumber |
 		unitNumber := currentUnit first.
 		html heading level4; class: 'currentUnit'; with: [
-			html sT: ('aurea:caput', unitNumber asString).
+			VIAAurHelper renderUnitLabel: unitNumber on: html.
 		].
 
 		self renderModuleExercises: currentUnitExercises on: html.
@@ -16,9 +16,9 @@ renderModuleExercisesOn: html
 
 	extraExercises ifNotBlank: [
 		html heading level4; with: [
-			html sT: ('aurea:unitC').
+			html sT: ('aurea:commentatio').
 			html text: ' / '.
-			html sT: ('aurea:unitV').
+			html sT: ('aurea:vocabula').
 		].
 		self renderModuleExercises: extraExercises on: html.
 	].

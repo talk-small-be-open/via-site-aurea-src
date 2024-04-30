@@ -70,7 +70,7 @@ renderContentOn: html
 								callback: [ self gotoAureaCaput: 'V' ];
 								with: [
 									html span class: 'entryTitle'; with: [
-										html sT: 'myHome:vocabulo' ].
+										html sT: 'myHome:vocabula' ].
 									html span class: 'entryGoAhead uk-visible@l'; with: [
 										html iconGoAhead
 									].

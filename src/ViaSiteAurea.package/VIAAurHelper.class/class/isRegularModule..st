@@ -1,3 +1,3 @@
 testing
 isRegularModule: aModule
-	^ self isRegularUnitaCode: aModule indexCode first
+	^ self isRegularUnitCode: aModule indexCode first

@@ -1,0 +1,3 @@
+icons
+iconVocabulaActive
+	self iconVocabula

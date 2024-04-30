@@ -1,3 +1,3 @@
 testing
-isVocabuloCode: aString
+isVocabulaCode: aString
 	^ aString = 'V'

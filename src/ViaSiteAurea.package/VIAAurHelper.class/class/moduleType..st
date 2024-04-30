@@ -3,7 +3,7 @@ moduleType: aModule
 	| first |
 	"R = Regular
 	C = Commentatio
-	V = Vocabulo"
+	V = Vocabula"
 
 	first := aModule indexCode first.
 	

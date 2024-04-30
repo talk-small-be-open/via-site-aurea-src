@@ -29,10 +29,10 @@ renderFastAccessMenuOn: html
 		html anchor
 			callback: [ self gotoSmartVocabula ];
 			with: [
-				html iconVocabuloActive: active.
+				html iconVocabulaActive: active.
 				html span class: 'menuLabel uk-visible@l'; with: [
 					"html space."
-					html sT: 'main:fastAccess:vocabulo'
+					html sT: 'main:fastAccess:vocabula'
 				]]
 	].
 	active := (moduleType = 'G').
