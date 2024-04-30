@@ -13,8 +13,9 @@ renderTitleOn: html
 "		html span class: 'level'; with: [ 
 			html iconLevelTag: model levelTag
 		]."
-		html span: 'Caput '.
-		html span: (VIAAurHelper aureaCaputOfModule: model) asString.
+		html span sT: 'aurea:caput'.
+		html space.
+		html capitalis: (VIAAurHelper aureaRomanCaputOfModule: model).
 		html span class: 'divider'; with: '|'.
 		html span: model indexCode asString.
 		html space.
