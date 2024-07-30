@@ -1,8 +1,6 @@
 initialization
 initialize
 	super initialize.
-
-	self addContainerDiv.
 	
 	pillarLengthEstimator := VIAPrLengthEstimator new.
 

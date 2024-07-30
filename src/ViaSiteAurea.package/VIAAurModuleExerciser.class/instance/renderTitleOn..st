@@ -13,9 +13,11 @@ renderTitleOn: html
 "		html span class: 'level'; with: [ 
 			html iconLevelTag: model levelTag
 		]."
-		VIAAurHelper renderUnitLabel: (VIAAurHelper aureaCaputOfModule: model) on: html.
+		html span class: 'caput'; with: [
+			VIAAurHelper renderUnitLabel: (VIAAurHelper aureaCaputOfModule: model) on: html ].
 		html span class: 'divider'; with: '|'.
-		html span: model indexCode asString.
-		html space.
-		html span: model title.
+		html span class: 'module'; with: [
+			html span: model indexCode asString.
+			html space.
+			html span: model title ].
 	]
