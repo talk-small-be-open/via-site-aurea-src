@@ -2,5 +2,5 @@
 visitViaAurPrLanguageFormat: aFormat
 	canvas tag
 		name: 'span';
-		class: 'language language-', aFormat languageCode;
+		parameterAt: 'class' put: ('language language-', aFormat languageCode);
 		with: [super visitViaAurPrLanguageFormat: aFormat]
