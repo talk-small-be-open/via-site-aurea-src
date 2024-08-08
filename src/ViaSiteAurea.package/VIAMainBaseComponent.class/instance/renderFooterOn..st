@@ -22,20 +22,10 @@ renderFooterOn: html
 					].
 					html div class: 'uk-width-1-1 uk-width-expand@l'; with: [
 						html ukGrid class: 'uk-flex uk-flex-wrap uk-flex-between@m uk-flex-right@l'; with: [
+							#('footer:imprint' 'footer:disclaimer' 'footer:agb') do: [ :eachKey |
 							html anchor
-								url: (self wd propertyAt: #imprint:url);
-								target: '_blank';
-	"							callback: [self openImprint];"
-								t: 'footer:imprint'.
-							html anchor
-								url: (self wd propertyAt: #disclaimer:url);
-								target: '_blank';
-	"							callback: [self openDisclaimer];"
-								t: 'footer:disclaimer'.
-							html anchor
-								url: (self wd propertyAt: #agb:url);
-								target: '_blank';
-	"							callback: [self openAgb];"
-								t: 'footer:agb' ]
+								callback: [self showInfoPanel: eachKey, ':text' title: eachKey];
+								t: eachKey ].
+						]
 			]]].
 		]

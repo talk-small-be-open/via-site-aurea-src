@@ -9,9 +9,9 @@ initializeInfoMenu
 
 	subMenu mainEntry: ((VIATextMenuEntry label: 'menu:info') icon: 'menuInfo'; yourself).
 
-	{'teacher'->'lehrpersonen/didaktische-informationen'. 'faq'->'lehrpersonen/faq'. 'press'->'info'. 'about'->'info'. 'support'->'uber-aurea-bulla/unterstutzung'} do: [ :each |
+	{'about'->''. 'teacher'->'didaktische-informationen'. 'faq'->'faq'. 'scrolly'->'scrolly'} do: [ :each |
 		| entry |
-		entry := VIAUrlMenuEntry label: ('menu:info:', each key) url: ('https://www.aureabulla.online/', each value).
+		entry := VIAUrlMenuEntry label: ('menu:info:', each key) url: ('https://www.hep-verlag.ch/aurea-bulla/', each value).
 		entry icon: 'menuInfoPage'.
 		subMenu addEntry: entry.
 	].
